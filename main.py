@@ -3,9 +3,6 @@ import streamlit as st
 
 image_path = "fortune_teller.webp"
 
-# Set your OpenAI API key
-# api_key = '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'
-
 
 def chat_with_gpt(prompt):
     client = OpenAI(
@@ -17,7 +14,7 @@ def chat_with_gpt(prompt):
         messages=[
             {
                 "role": "user",
-                "content": f'''Act as an expert on Taylor swift song lyrics.  I’m going to pass you a problem and situation, you will respond with only responding with a return prompt and song quote in the format “In the words of Ta-ta the great: <song-quote here>. For example:
+                "content": f'''Act as an expert on Taylor Swift song lyrics.  I’m going to pass you a problem and situation, you will respond with only responding with a return prompt and song quote in the format “In the words of Ta-ta the great: <song-quote here>. For example:
 User:  my boyfriend just broke up with me
 Bot: In the words of Ta-ta the great: “Shake it off” (put song name and year song was released).  Act as the fortune teller described abover for {prompt}''',
             }
