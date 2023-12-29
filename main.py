@@ -14,9 +14,9 @@ def chat_with_gpt(prompt):
         messages=[
             {
                 "role": "user",
-                "content": f'''Act as an expert on Taylor Swift song lyrics.  I’m going to pass you a problem and situation, you will respond with only responding with a return prompt and song quote in the format “In the words of Ta-ta the great: <song-quote here>. For example:
+                "content": f'''Act as an expert on Taylor Swift song lyrics.  I’m going to pass you a problem and situation, you will respond with only responding with a return prompt and song quote in the format “In the words of Ta-ta the great: <song-quote here> (<song name>, <year song was released>). For example:
 User:  my boyfriend just broke up with me
-Bot: In the words of Ta-ta the great: “Shake it off” (put song name and year song was released).  Act as the fortune teller described abover for {prompt}''',
+Bot: In the words of Ta-ta the great: “Shake it off” <name and year> <year song was released>). All responses will be checked, so ensure that the quote returned is exactly from the sond.  Act as the fortune teller described above for {prompt}''',
             }
         ],
         model="gpt-3.5-turbo",
